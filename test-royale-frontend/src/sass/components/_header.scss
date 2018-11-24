@@ -4,7 +4,13 @@
   text-align: center;
   background: $primary-color;
   color: $highlight-color;
-  width: 70rem;
-  padding: 3rem;
+  padding: 1rem;
   margin: 0 auto;
+
+  h1 {
+    font: {
+      size: 3rem;
+      family: $header-font;
+    }
+  }
 }
