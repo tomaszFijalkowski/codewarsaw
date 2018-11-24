@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, {Component, Fragment} from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {MainPage} from './components/MainPage';
+import './sass/App.scss';
+import {Game} from "./components/Game";
+import {Header} from "./components/Header";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <h1>Test Royale</h1>
-          <button>Start Game</button>
-      </div>
+        <Router>
+            <Fragment>
+                <Header />
+                <Route exact path="/" component={MainPage} />
+                <Route path="/game/" component={Game} />
+            </Fragment>
+        </Router>
     );
   }
 }

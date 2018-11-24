@@ -1,0 +1,10 @@
+@import '../common/constants';
+
+.header {
+  text-align: center;
+  background: $primary-color;
+  color: $highlight-color;
+  width: 70rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
