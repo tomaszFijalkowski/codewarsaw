@@ -10,15 +10,13 @@ public class Question {
   private Long id;
   private String category;
   private String questionText;
-  private String goodAnswer;
 
   public Question() {
   }
 
-  public Question(String category, String questionText, String goodAnswer) {
+  public Question(String category, String questionText) {
     this.category = category;
     this.questionText = questionText;
-    this.goodAnswer = goodAnswer;
   }
 
   public Long getId() {
@@ -43,13 +41,5 @@ public class Question {
 
   public void setQuestionText(String questionText) {
     this.questionText = questionText;
-  }
-
-  public String getGoodAnswer() {
-    return goodAnswer;
-  }
-
-  public void setGoodAnswer(String goodAnswer) {
-    this.goodAnswer = goodAnswer;
   }
 }
