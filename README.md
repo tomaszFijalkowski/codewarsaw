@@ -1,5 +1,5 @@
 # CodeWarsaw - Test Royale
-Submission for HackYeah 2018 open education category.
+Submission for HackYeah 2018 education open category.
 
 ## To run the application:
 
