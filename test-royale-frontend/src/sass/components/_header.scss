@@ -1,0 +1,21 @@
+@import '../common/constants';
+
+.header {
+  text-align: center;
+  background: $primary-color;
+  color: $highlight-color;
+  padding: 0.1rem;
+  margin: 0 auto;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  border: 0.2rem solid $secondary-color;
+  border-top: 0;
+
+  h1 {
+    font: {
+      size: 2.2rem;
+      family: $header-font;
+    }
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+  }
+}
