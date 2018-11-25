@@ -7,7 +7,14 @@ import {Timer} from "./Timer";
 
 export class Game extends Component {
   state = {
-    timer: 60
+      timer: 60,
+      bossHealth: 16000,
+      userHealth: 54
+  };
+
+  selectAnswer = (answer) => {
+      if (answer.isCorrect) this.setState({bossHealth: this.state.bossHealth - 350});
+      else this.setState({userHealth: this.state.userHealth - 4});
   };
 
   componentDidMount() {
@@ -19,12 +26,17 @@ export class Game extends Component {
   render() {
       return (
           <div className="game-page">
-              <UserDisplay />
-              <BossDisplay />
+              <UserDisplay hp={this.state.userHealth} />
+              <BossDisplay hp={this.state.bossHealth} />
               <PartyList />
               <Timer timeLeft={this.state.timer} />
               <QuestionBox question={{questionText: "What is this?"}}
-                           answers={["Nothing", "Something", "Everything", "No idea"]} />
+                           answers={[
+                               {text: "Nothing", isCorrect: false},
+                               {text: "Something", isCorrect: true},
+                               {text: "Everything", isCorrect: false},
+                               {text: "No idea", isCorrect: false}]}
+                           onClick={this.selectAnswer} />
           </div>
       );
   }
