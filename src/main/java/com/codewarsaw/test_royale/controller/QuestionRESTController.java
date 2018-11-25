@@ -1,5 +1,7 @@
-package com.codewarsaw.test_royale.question;
+package com.codewarsaw.test_royale.controller;
 
+import com.codewarsaw.test_royale.entity.Question;
+import com.codewarsaw.test_royale.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,4 +31,8 @@ public class QuestionRESTController {
       return ResponseEntity.status(204).body(e.getMessage());
     }
   }
+
+
+
+
 }

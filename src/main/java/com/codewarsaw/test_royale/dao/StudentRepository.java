@@ -1,5 +1,6 @@
-package com.codewarsaw.test_royale.student;
+package com.codewarsaw.test_royale.dao;
 
+import com.codewarsaw.test_royale.entity.Student;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

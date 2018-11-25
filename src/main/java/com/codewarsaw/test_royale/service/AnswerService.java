@@ -1,6 +1,6 @@
-package com.codewarsaw.test_royale.question;
+package com.codewarsaw.test_royale.service;
 
-import org.springframework.stereotype.Service;
+import com.codewarsaw.test_royale.entity.Answer;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.codewarsaw.test_royale.student;
+package com.codewarsaw.test_royale.entity;
 
 import javax.persistence.*;
 

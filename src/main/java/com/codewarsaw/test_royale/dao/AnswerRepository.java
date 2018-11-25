@@ -1,5 +1,6 @@
-package com.codewarsaw.test_royale.question;
+package com.codewarsaw.test_royale.dao;
 
+import com.codewarsaw.test_royale.entity.Answer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

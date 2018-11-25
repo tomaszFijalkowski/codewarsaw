@@ -1,11 +1,11 @@
-package com.codewarsaw.test_royale.student;
+package com.codewarsaw.test_royale.service.implementation;
 
-import com.codewarsaw.test_royale.question.Question;
-import com.codewarsaw.test_royale.question.QuestionRepository;
+import com.codewarsaw.test_royale.dao.StudentRepository;
+import com.codewarsaw.test_royale.entity.Student;
+import com.codewarsaw.test_royale.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
