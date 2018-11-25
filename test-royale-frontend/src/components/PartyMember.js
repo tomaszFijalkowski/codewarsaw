@@ -6,7 +6,7 @@ export const PartyMember = ({name, hp}) => {
             <img src="https://via.placeholder.com/100" alt="" />
             <div>
                 <h5>{name}</h5>
-                <p>{hp.current}/{hp.max}</p>
+                <p>Health: {hp.current}/{hp.max}</p>
             </div>
         </li>
     );

@@ -1,13 +1,10 @@
 import React from 'react';
 
-export const QuestionBox = () => {
+export const QuestionBox = ({question, answers}) => {
     return (
         <div className="question-box">
-            <h3>Question?</h3>
-            <p>Answer 1</p>
-            <p>Answer 2</p>
-            <p>Answer 3</p>
-            <p>Answer 4</p>
+            <h3>{question.questionText}</h3>
+            {answers.map(answer => <p>{answer}</p>)}
         </div>
     );
 };
