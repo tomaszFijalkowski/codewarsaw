@@ -5,9 +5,13 @@
   background: $primary-color;
   color: $highlight-color;
   margin: 0 auto;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border: 0.2rem solid $secondary-color;
+  border-bottom: 0;
 
-  display:grid;
-  grid: repeat(1, 1fr) / repeat(3, 1fr);
+  display: flex;
+  justify-content: space-around;
 
   a {
     color: inherit;

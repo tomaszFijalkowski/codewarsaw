@@ -7,10 +7,10 @@ export const UserDisplay = ({hp}) => {
             <h3>Timmy Cartwright</h3>
             <p>Level 3 Mage</p>
             <p>Health: {hp}</p>
-            <p>Coins: 32</p>
+            <p>67/90 XP</p>
             <div className="remained-container">
-                <p>67/90 XP</p>
                 <p>Element: Earth</p>
+                <p>Coins: 32</p>
             </div>
         </div>
     );

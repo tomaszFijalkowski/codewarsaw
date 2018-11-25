@@ -2,9 +2,9 @@
 
 .game-page {
   margin: 1rem 0;
-  height: 35rem;
+  height: 32rem;
   display: grid;
-  grid: repeat(3, 1.4fr) 1.7fr repeat(3, 1.1fr) / 2fr 1fr repeat(3, 1.3fr);
+  grid: repeat(2, 1.5fr) 1fr 1.7fr repeat(3, 1.3fr) / 2fr 1fr repeat(3, 1.3fr);
   grid-gap: 1rem;
   grid-template-areas:
     "user user boss boss boss"
@@ -34,18 +34,16 @@
   .user-display {
     grid-area: user;
     border-bottom-right-radius: 0;
-    background-color: $lightbackground-color;
-    margin: 5px;
+    background-color: $light-background-color;
 
     p:nth-of-type(1){
       font-style: italic;
     }
 
-    .remained-container{
-      width: 60%;
-    }
-
-    p{
+    .remained-container {
+      margin: -0.5rem;
+      display: flex;
+      justify-content: space-around;
       font-weight: bolder;
     }
 
@@ -123,7 +121,7 @@
 
     span {
       background: $tertiary-color;
-      width: 87%;
+      width: 90%;
       height: 87%;
       border-radius: 0.3rem;
       text-align: center;
@@ -136,11 +134,16 @@
 
   .question-box {
     grid-area: qbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-top-left-radius: 0;
     padding: 0;
 
     h3 {
       background-color: $primary-color;
+      border-top-right-radius: 0.6rem;
+      height: 100%;
     }
 
     h3, p {
@@ -153,6 +156,11 @@
 
       &:hover {
         background-color: $highlight-color;
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
       }
     }
   }
