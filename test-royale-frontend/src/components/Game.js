@@ -32,7 +32,7 @@ export class Game extends Component {
                lastAnswer: "incorrect"}
           );
       }
-      this.setState({currentQuestion: currentQuestion + 1});
+      this.setState({currentQuestion: Math.min(currentQuestion + 1, 19)});
   };
 
   componentDidMount() {
