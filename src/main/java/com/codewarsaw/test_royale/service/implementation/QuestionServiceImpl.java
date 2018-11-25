@@ -11,15 +11,20 @@ import java.util.List;
 @Service
 public class QuestionServiceImpl implements QuestionService {
 
-  QuestionRepository questionRepository;
+    QuestionRepository questionRepository;
 
-  @Autowired
-  public QuestionServiceImpl(QuestionRepository questionRepository) {
-    this.questionRepository = questionRepository;
-  }
+    @Autowired
+    public QuestionServiceImpl(QuestionRepository questionRepository) {
+        this.questionRepository = questionRepository;
+    }
 
-  @Override
-  public List<Question> findAll() {
-    return questionRepository.findAll();
-  }
+    @Override
+    public List<Question> findAll() {
+        return questionRepository.findAll();
+    }
+
+    @Override
+    public Question findById(Long questionId) {
+        return questionRepository.findById(questionId).get();
+    }
 }

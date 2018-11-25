@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface AnswerService {
 
-    List<Answer> findAllByQuestionId(int questionId);
+    List<Answer> findByQuestionId(long questionId);
 }

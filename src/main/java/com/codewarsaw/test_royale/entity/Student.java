@@ -10,11 +10,25 @@ public class Student {
     private Long id;
     private String name;
     private int experience = 0;
+
+    private int money = 0;
+
     private int answeredRight = 0;
     private int answeredWrong = 0;
 
+    public Student() {
+    }
+
     public Student(String name) {
         this.name = name;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
     }
 
     public Long getId() {
