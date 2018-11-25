@@ -30,6 +30,10 @@
     grid-area: user;
     border-bottom-right-radius: 0;
 
+    p:nth-of-type(1){
+      font-style: italic;
+    }
+
     img {
       width: 40%;
       float: right;

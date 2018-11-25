@@ -7,21 +7,24 @@ const PARTY_MEMBERS = [
         hp: {
             current: 36,
             max: 47
-        }
+        },
+        img: "http://www.stephenchisa.com/style/images/pixels/Mike.png"
     },
     {
         name: "Andrea Monroe",
         hp: {
             current: 42,
             max: 48
-        }
+        },
+        img: "http://www.stephenchisa.com/style/images/pixels/Seitz.png"
     },
     {
         name: "Bob Thorn",
         hp: {
             current: 12,
             max: 36
-        }
+        },
+        img: "http://www.stephenchisa.com/style/images/pixels/jimmy.png"
     },
 ];
 
