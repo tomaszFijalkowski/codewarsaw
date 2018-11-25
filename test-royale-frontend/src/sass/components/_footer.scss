@@ -1,0 +1,36 @@
+@import '../common/constants';
+
+.footer{
+  text-align: center;
+  background: $primary-color;
+  color: $highlight-color;
+  margin: 0 auto;
+
+  display:grid;
+  grid: repeat(1, 1fr) / repeat(3, 1fr);
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+}
+
+/*
+.classname {
+  margin: 1 rem 0;
+  display: grid;
+  grid: repeat(5, 1fr) / repeat(5, 1fr);
+  grid-gap: 1 rem;
+  grid-template-areas:
+    "user user boss boss boss";
+    "user user boss boss boss";
+    "user user boss boss boss";
+    "user user boss boss boss";
+    "user user boss boss boss";
+
+  .boss-display{
+    grid-area: boss;
+  }
+  }
+  */

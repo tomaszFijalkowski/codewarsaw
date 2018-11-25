@@ -3,9 +3,15 @@ import {Link} from "react-router-dom";
 
 export const MainPage = () => {
   return (
-      <div>
-          <Link to="/game"><button>Start Game</button></Link>
-          <button>Exit Game</button>
+      <div className="login-box">
+          <form>
+              <label>Username</label>
+              <input></input>
+              <label>Password</label>
+              <input></input>
+          </form>
+          <Link to="/game"><button className="home-button">Log In</button></Link>
+          <button className="home-button">Register</button>
       </div>
   );
 };

@@ -1,0 +1,23 @@
+@import '../common/constants';
+
+.login-box {
+  text-align: center;
+  background: $lightbackground-color;
+  color: $primary-color;
+  padding: 2rem 1rem;
+  margin: 1em auto;
+  border: 2px $tertiary-color solid;
+
+  input, label{
+    font-size: 1.3em;
+    display: block;
+    margin: 5px auto;
+  }
+
+  .home-button{
+    margin: 20px;
+    font-size: 1.2rem;
+    bordercolor: $tertiary-color;
+    text-color: $highlight-color;
+  }
+}
