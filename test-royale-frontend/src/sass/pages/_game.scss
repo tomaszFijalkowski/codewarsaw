@@ -1,0 +1,159 @@
+@import '../common/constants';
+
+.game-page {
+  margin: 1rem 0;
+  height: 35rem;
+  display: grid;
+  grid: repeat(3, 1.4fr) 1.7fr repeat(3, 1.1fr) / 2fr 1fr repeat(3, 1.3fr);
+  grid-gap: 1rem;
+  grid-template-areas:
+    "user user boss boss boss"
+    "user user boss boss boss"
+    "user user boss boss boss"
+    "party items boss boss boss"
+    "party qbox qbox qbox qbox"
+    "party qbox qbox qbox qbox"
+    "party qbox qbox qbox qbox";
+
+  h3 {
+    margin: 0;
+  }
+
+  img {
+    border: 0.2rem solid $secondary-color;
+  }
+
+  > div {
+    background-color: $tertiary-color;
+    text-align: center;
+    padding: 1rem;
+    border: 0.2rem solid $secondary-color;
+    border-radius: 0.6rem;
+  }
+
+  .user-display {
+    grid-area: user;
+    border-bottom-right-radius: 0;
+    background-color: $lightbackground-color;
+    margin: 5px;
+
+    p:nth-of-type(1){
+      font-style: italic;
+    }
+
+    .remained-container{
+      width: 60%;
+    }
+
+    p{
+      font-weight: bolder;
+    }
+
+
+    img {
+      width: 40%;
+      float: right;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .boss-display {
+    grid-area: boss;
+    border-bottom-left-radius: 0;
+
+    img {
+      border: none;
+    }
+
+    p{
+      font-weight: bolder;
+    }
+  }
+
+  .party-list {
+    grid-area: party;
+    padding: 0 1rem;
+    border-top-right-radius: 0;
+
+    h4 {
+      margin: 1rem;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        img {
+          box-sizing: border-box;
+          border-radius: 50%;
+          height: 4rem;
+        }
+
+        div {
+          font-size: 0.75rem;
+          width: 100%;
+
+          h5 {
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .timer {
+    padding: 0;
+    background: linear-gradient(to left, $secondary-color 0%, $primary-color 100%);
+    border: 0;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      background: $tertiary-color;
+      width: 87%;
+      height: 87%;
+      border-radius: 0.3rem;
+      text-align: center;
+      display: inherit;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+  }
+
+  .question-box {
+    grid-area: qbox;
+    border-top-left-radius: 0;
+    padding: 0;
+
+    h3 {
+      background-color: $primary-color;
+    }
+
+    h3, p {
+      padding: 0.5rem;
+    }
+
+    p {
+      border-top: 0.2rem solid $secondary-color;
+      margin: 0;
+
+      &:hover {
+        background-color: $highlight-color;
+      }
+    }
+  }
+}
