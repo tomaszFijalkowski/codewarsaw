@@ -1,6 +1,8 @@
 package com.codewarsaw.test_royale.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Question {
@@ -10,6 +12,7 @@ public class Question {
   private Long id;
   private String category;
   private String questionText;
+  private List<Answer> answers = new ArrayList<>();
 
   public Question() {
   }
@@ -41,5 +44,9 @@ public class Question {
 
   public void setQuestionText(String questionText) {
     this.questionText = questionText;
+  }
+
+  public boolean checkAnswer(Answer answer){
+    return answer.isCorrect();
   }
 }
