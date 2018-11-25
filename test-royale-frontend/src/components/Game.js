@@ -23,7 +23,8 @@ export class Game extends Component {
               <BossDisplay />
               <PartyList />
               <Timer timeLeft={this.state.timer} />
-              <QuestionBox />
+              <QuestionBox question={{questionText: "What is this?"}}
+                           answers={["Nothing", "Something", "Everything", "No idea"]} />
           </div>
       );
   }

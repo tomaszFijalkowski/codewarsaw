@@ -31,7 +31,9 @@
     border-bottom-right-radius: 0;
 
     img {
-      width: 100%;
+      width: 40%;
+      float: right;
+      border-radius: 0.6rem;
     }
   }
 
@@ -62,7 +64,7 @@
 
         div {
           font-size: 0.75rem;
-          margin-left: 1rem;
+          width: 100%;
 
           h5 {
             margin: 0;
@@ -102,5 +104,11 @@
   .question-box {
     grid-area: qbox;
     border-top-left-radius: 0;
+    padding: 0;
+
+    p {
+      border-top: 0.3rem solid $secondary-color;
+
+    }
   }
 }
