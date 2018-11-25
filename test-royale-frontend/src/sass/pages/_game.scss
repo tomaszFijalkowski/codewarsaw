@@ -34,10 +34,21 @@
   .user-display {
     grid-area: user;
     border-bottom-right-radius: 0;
+    background-color: $lightbackground-color;
+    margin: 5px;
 
     p:nth-of-type(1){
       font-style: italic;
     }
+
+    .remained-container{
+      width: 60%;
+    }
+
+    p{
+      font-weight: bolder;
+    }
+
 
     img {
       width: 40%;
@@ -49,6 +60,14 @@
   .boss-display {
     grid-area: boss;
     border-bottom-left-radius: 0;
+
+    img {
+      border: none;
+    }
+
+    p{
+      font-weight: bolder;
+    }
   }
 
   .party-list {
