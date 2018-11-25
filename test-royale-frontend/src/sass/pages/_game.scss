@@ -63,8 +63,25 @@
       border: none;
     }
 
-    p{
+    p {
       font-weight: bolder;
+
+      &.health {
+        font-weight: normal;
+        margin-top: 0.1rem;
+      }
+
+      &.correct {
+        margin-top: 0;
+        color: greenyellow;
+        text-shadow: 0.1rem 0.1rem 0.1rem black;
+      }
+
+      &.incorrect {
+        margin-top: 0;
+        color: #ff1300;
+        text-shadow: 0.1rem 0.1rem 0.027rem black;
+      }
     }
   }
 
@@ -153,6 +170,7 @@
     p {
       border-top: 0.2rem solid $secondary-color;
       margin: 0;
+      font-size: 0.75rem;
 
       &:hover {
         background-color: $highlight-color;

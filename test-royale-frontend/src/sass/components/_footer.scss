@@ -1,6 +1,6 @@
 @import '../common/constants';
 
-.footer{
+.footer {
   text-align: center;
   background: $primary-color;
   color: $highlight-color;
@@ -8,8 +8,6 @@
   border-top-left-radius: 0.6rem;
   border-top-right-radius: 0.6rem;
   border: 0.2rem solid $secondary-color;
-  border-bottom: 0;
-
   display: flex;
   justify-content: space-around;
 
@@ -19,22 +17,3 @@
   }
 
 }
-
-/*
-.classname {
-  margin: 1 rem 0;
-  display: grid;
-  grid: repeat(5, 1fr) / repeat(5, 1fr);
-  grid-gap: 1 rem;
-  grid-template-areas:
-    "user user boss boss boss";
-    "user user boss boss boss";
-    "user user boss boss boss";
-    "user user boss boss boss";
-    "user user boss boss boss";
-
-  .boss-display{
-    grid-area: boss;
-  }
-  }
-  */

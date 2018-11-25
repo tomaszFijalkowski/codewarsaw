@@ -17,7 +17,9 @@
   .home-button{
     margin: 20px;
     font-size: 1.2rem;
-    bordercolor: $tertiary-color;
-    text-color: $highlight-color;
+    border-color: $tertiary-color;
+    background-color: $highlight-color;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
   }
 }

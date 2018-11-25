@@ -8,18 +8,36 @@ import {Timer} from "./Timer";
 export class Game extends Component {
   state = {
       timer: 60,
-      bossHealth: 16000,
-      userHealth: 54
+      bossHealth: { max: 16000, current: 16000 },
+      userHealth: { max: 54, current: 50 },
+      currentQuestion: 0,
+      lastAnswer: ""
+  };
+
+  calculateNextHealth = (health) => {
+      let damage = health * (Math.random() * 0.3);
+      return ~~(health - damage);
   };
 
   selectAnswer = (answer) => {
-      if (answer.isCorrect) this.setState({bossHealth: this.state.bossHealth - 350});
-      else this.setState({userHealth: this.state.userHealth - 4});
+      let {userHealth, bossHealth, currentQuestion} = this.state;
+      if (answer) {
+          this.setState(
+              {bossHealth: Object.assign({}, bossHealth, {current: this.calculateNextHealth(bossHealth.current)}),
+               lastAnswer: "correct"}
+          );
+      } else {
+          this.setState(
+              {userHealth: Object.assign({}, userHealth, {current: this.calculateNextHealth(userHealth.current)}),
+               lastAnswer: "incorrect"}
+          );
+      }
+      this.setState({currentQuestion: currentQuestion + 1});
   };
 
   componentDidMount() {
       setInterval(() => {
-          this.setState({timer: this.state.timer - 1});
+          this.setState({timer: Math.max(this.state.timer - 1, 0)});
       }, 1000)
   }
 
@@ -27,15 +45,10 @@ export class Game extends Component {
       return (
           <div className="game-page">
               <UserDisplay hp={this.state.userHealth} />
-              <BossDisplay hp={this.state.bossHealth} />
+              <BossDisplay hp={this.state.bossHealth} lastAnswer={this.state.lastAnswer} />
               <PartyList />
               <Timer timeLeft={this.state.timer} />
-              <QuestionBox question={{questionText: "What is this?"}}
-                           answers={[
-                               {text: "Nothing", isCorrect: false},
-                               {text: "Something", isCorrect: true},
-                               {text: "Everything", isCorrect: false},
-                               {text: "No idea", isCorrect: false}]}
+              <QuestionBox question={this.props.questions[this.state.currentQuestion]}
                            onClick={this.selectAnswer} />
           </div>
       );
